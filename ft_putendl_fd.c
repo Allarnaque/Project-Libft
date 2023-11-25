@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:07:06 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/24 15:56:52 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/25 18:32:52 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void    ft_putendl_fd(char *s, int fd)
     size_t  i;
 
     i = ft_strlen(s);
-    write(fd, s, i);
-    write(fd, '\n', 1);
+    write(fd, &s, i);
+    write(fd, "\n", 1);
 }

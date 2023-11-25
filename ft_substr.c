@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:23:21 by allan             #+#    #+#             */
-/*   Updated: 2023/11/21 18:59:22 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/25 18:50:21 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char    *ft_substr(char const *source, unsigned int start, size_t len);
 char    *ft_substr(char const *source, unsigned int start, size_t len)
 {
     char    *dest;
-    int i;
+    size_t i;
 
     dest = malloc(len * sizeof(char));
     if (!dest)

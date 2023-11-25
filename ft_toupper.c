@@ -6,11 +6,11 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 14:12:31 by allan             #+#    #+#             */
-/*   Updated: 2023/11/21 16:15:11 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/25 18:50:45 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int    ft_toupper(int ch);
 

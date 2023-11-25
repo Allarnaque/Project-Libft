@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:07:06 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/24 16:07:43 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/25 16:06:56 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char    *ft_itoa(int n)
 
 /*int main()
 {
-    int n = -2147483648;
+    int n = 0;
     char *arr = ft_itoa(n);
     printf("%s", arr);
     return (0);

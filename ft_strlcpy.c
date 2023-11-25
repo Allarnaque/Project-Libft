@@ -3,26 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adebert <adebert@student.42.fr>            +#+  +:+       +#+        */
+/*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:07:06 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/09 15:46:13 by adebert          ###   ########.fr       */
+/*   Updated: 2023/11/25 18:49:31 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
-#include <unistd.h>
+#include "libft.h"
 #define SIZE 50
 
-int ft_strlen(const char *str)
-{
-    int i;
-
-    i = 0;
-    while(str[i])
-        i++;
-    return(i);
-}
+size_t  ft_strlcpy(char *dst, const char *src, size_t size);
 
 size_t  ft_strlcpy(char *dst, const char *src, size_t size)
 {

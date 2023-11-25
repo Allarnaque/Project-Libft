@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adebert <adebert@student.42.fr>            +#+  +:+       +#+        */
+/*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:07:06 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/23 16:14:31 by adebert          ###   ########.fr       */
+/*   Updated: 2023/11/25 18:35:44 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,15 +80,16 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		words;
     char *str;
-    
+    char	**split;
+	
     str = (char *)s;
-	char	**split;
-
+	i = 0;
 	words = ft_words(str, c);
 	split = malloc(sizeof(char *) * (words + 1));
     if(!split)
-        return (0);
-	i = 0;
+	{
+		return (0);
+	}
 	while (*str)
 	{
 		while (sep_count(str, c) && *str)
