@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 15:52:08 by allan             #+#    #+#             */
-/*   Updated: 2023/11/25 18:48:51 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/25 21:15:11 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 int ft_atoi(const char *nptr);
 void    *ft_calloc(size_t nmemb, size_t size);
+int ft_isalpha(int c);
 char    *ft_itoa(int n);
 void *ft_memchr(const void *s, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
