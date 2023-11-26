@@ -6,20 +6,22 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:07:06 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/25 18:35:44 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/26 21:06:09 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	sep_count(char *str, char sep)
+char	**ft_split(char const *s, char c);
+
+static int	sep_count(char *str, char sep)
 {
-		if (*str == sep)
-			return (1);
+	if (*str == sep)
+		return (1);
 	return (0);
 }
 
-int	ft_words(char *str, char sep)
+static int	ft_words(char *str, char sep)
 {
 	int		i;
 	int		words;
@@ -39,33 +41,35 @@ int	ft_words(char *str, char sep)
 	}
 	return (words);
 }
-void    ft_free(char**split)
-{
-    size_t  i;
 
-    i = 0;
-    while(split[i])
-    {
-        free(split[i]);
-        i++;
-    }
+static void	ft_free(char**split)
+{
+	size_t	i;
+
+	i = 0;
+	while (split[i])
+	{
+		free(split[i]);
+		i++;
+	}
 }
-char	*ft_strdup_split(char *str, char c, char **split)
+
+static char	*ft_strdup_split(char *str, char c, char **split)
 {
 	char	*new;
 	int		i;
 	int		len;
 
-    len = 0;
+	len = 0;
 	while (str[len] && sep_count(&str[len], c) == 0)
-        len++;
+		len++;
 	i = 0;
 	new = (char *)malloc(sizeof(char) * len + 1);
 	if (!new)
-    {
-        ft_free(split);
-        return (NULL);
-    }
+	{
+		ft_free(split);
+		return (NULL);
+	}
 	while (i < len)
 	{
 		new[i] = str[i];
@@ -79,17 +83,15 @@ char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		words;
-    char *str;
-    char	**split;
-	
-    str = (char *)s;
+	char	*str;
+	char	**split;
+
+	str = (char *)s;
 	i = 0;
 	words = ft_words(str, c);
 	split = malloc(sizeof(char *) * (words + 1));
-    if(!split)
-	{
+	if (!split)
 		return (0);
-	}
 	while (*str)
 	{
 		while (sep_count(str, c) && *str)
@@ -106,7 +108,7 @@ char	**ft_split(char const *s, char c)
 	return (split);
 }
 
-int	main()
+/*int	main()
 {
 	char *str = "     Hello                             les Potes  ";
 	char c = ' ';
@@ -119,4 +121,4 @@ int	main()
 		i++;
 	}
 	return (0);
-}
+}*/

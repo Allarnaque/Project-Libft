@@ -6,22 +6,22 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 14:12:31 by allan             #+#    #+#             */
-/*   Updated: 2023/11/25 18:50:45 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/26 20:57:47 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int    ft_toupper(int ch);
+int	ft_toupper(int ch);
 
-int    ft_toupper(int ch)
+int	ft_toupper(int ch)
 {
-    if (ch >= 97 && ch <= 122)
-    {
-        ch = ch - 32;
-        return (ch);
-    }
-    return (ch);
+	if (ch >= 97 && ch <= 122)
+	{
+		ch = ch - 32;
+		return (ch);
+	}
+	return (ch);
 }
 
 /*int main()
@@ -32,5 +32,3 @@ int    ft_toupper(int ch)
     printf("%c", toupper(ch));
     return (0);
 }*/
-
-

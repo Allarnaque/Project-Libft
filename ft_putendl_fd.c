@@ -6,17 +6,19 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:07:06 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/25 18:32:52 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/26 21:06:23 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putendl_fd(char *s, int fd)
-{
-    size_t  i;
+void	ft_putendl_fd(char *s, int fd);
 
-    i = ft_strlen(s);
-    write(fd, &s, i);
-    write(fd, "\n", 1);
+void	ft_putendl_fd(char *s, int fd)
+{
+	size_t	i;
+
+	i = ft_strlen(s);
+	write(fd, &s, i);
+	write(fd, "\n", 1);
 }

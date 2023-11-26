@@ -6,32 +6,30 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:56:04 by allan             #+#    #+#             */
-/*   Updated: 2023/11/21 20:51:47 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/26 21:08:29 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char const *s1, char const *s2);
 
-char    *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    char    *dest;
-    size_t  destlen;
+	char	*dest;
+	size_t	destlen;
 
-    destlen = strlen(s1) + strlen(s2);
-    dest = malloc(destlen * sizeof(char));
-    if (!dest)
-        return  (NULL);
-    
-    
-    while (*s1)
-        *dest++ = *s1++;
-    while (*s2)
-        *dest++ = *s2++;
-    *dest = '\0';
-    dest = dest - destlen;
-    return (dest);
+	destlen = strlen(s1) + strlen(s2);
+	dest = malloc(destlen * sizeof(char));
+	if (!dest)
+		return (NULL);
+	while (*s1)
+		*dest++ = *s1++;
+	while (*s2)
+		*dest++ = *s2++;
+	*dest = '\0';
+	dest = dest - destlen;
+	return (dest);
 }
 
 /*int main()

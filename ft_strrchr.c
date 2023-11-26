@@ -6,33 +6,32 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 23:10:46 by allan             #+#    #+#             */
-/*   Updated: 2023/11/25 18:49:59 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/26 20:41:53 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strrchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
-char    *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(*s)
-    {
-        s++;
-        i++;
-    }    
-    while(i >= 0)
-    {
-        if(*s == c)
-                return ((char *)s);
-        i--;
-        s--;
-    }
-    return (NULL);
-
+	i = 0;
+	while (*s)
+	{
+		s++;
+		i++;
+	}
+	while (i >= 0)
+	{
+		if (*s == c)
+			return ((char *)s);
+		i--;
+		s--;
+	}
+	return (NULL);
 }
 
 /*int main()

@@ -6,28 +6,26 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:31:43 by allan             #+#    #+#             */
-/*   Updated: 2023/11/21 16:25:51 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/26 19:56:59 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_calloc(size_t nmemb, size_t size);
+void	*ft_calloc(size_t nmemb, size_t size);
 
-void    *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-    void    *ptr;
+	void	*ptr;
 
-    if (nmemb == 0 || size == 0)
-        return (NULL);
-
-    ptr = malloc(nmemb * sizeof(size));
-    bzero (ptr, nmemb * size);
-    
-    return (ptr);
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	ptr = malloc(nmemb * sizeof(size));
+	bzero (ptr, nmemb * size);
+	return (ptr);
 }
 
-int main()
+/*int main()
 {
     int *arr;
     int *arr2;
@@ -46,4 +44,4 @@ int main()
     }
     return (0);
     
-}
+}*/
