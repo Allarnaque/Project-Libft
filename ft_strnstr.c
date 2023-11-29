@@ -6,32 +6,33 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:11:49 by allan             #+#    #+#             */
-/*   Updated: 2023/11/29 18:27:56 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/29 22:24:58 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strnstr(char const *big, char const *little, size_t len);
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(char const *big, char const *little, size_t len)
 {
-	size_t		i;
+	size_t	i;
 
-	i = 0;
-	if (little == NULL || ft_strlen(little) == 0)
-		return ((char *) big);
-	if (ft_strlen(little) > len)
+	if (!big && !len)
 		return (NULL);
-	while (i < len)
+	if (!*little)
+		return ((char *)big);
+	while (*big && len--)
 	{
-		if (ft_strncmp((char *)&big[i], little, ft_strlen(little)) == 0)
+		i = 0;
+		while (*(big + i) == *(little + i)
+			&& *(little + i) && i <= len)
 		{
-			if (i + ft_strlen(little) > len)
-				return (NULL);
-			return ((char *)&big[i]);
+			if (!*(little + i + 1))
+				return ((char *)big);
+			i++;
 		}
-		i++;
+		big++;
 	}
 	return (NULL);
 }

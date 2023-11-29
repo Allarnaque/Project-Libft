@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 19:10:37 by allan             #+#    #+#             */
-/*   Updated: 2023/11/29 18:20:13 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/29 22:25:32 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static size_t	ft_ctest(char *set, char c)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	lendest;
+	size_t	i;
 	size_t	start;
 	size_t	end;
 	char	*dest;
@@ -38,28 +38,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	while (s1[start] && ft_ctest((char *)set, s1[start]))
 		start++;
-	end = ft_strlen(s1) - 1;
-	while (s1[end] && ft_ctest((char *)set, s1[end]))
+	end = ft_strlen(s1);
+	while (end > start && ft_ctest((char *)set, s1[end - 1]))
 		end--;
-	lendest = end - start;
-	dest = malloc((lendest + 2) * sizeof(char));
+	dest = malloc((end - start + 1) * sizeof(char));
 	if (!dest)
 		return (NULL);
-	end = 0;
-	while (end <= lendest)
-	{
-		dest[end] = s1[start];
-		end++;
-		start++;
-	}
-	dest[end] = '\0';
+	i = 0;
+	while (start < end)
+		dest[i++] = s1[start++];
+	dest[i] = '\0';
 	return (dest);
 }
-
-/*int main()
-{
-    char s1[] = "ABhelloACB";
-    char set[] = "ABC";
-    printf("%s", ft_strtrim(s1, set));
-    return  (0);
-}*/

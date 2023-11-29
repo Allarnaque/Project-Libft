@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 01:21:12 by allan             #+#    #+#             */
-/*   Updated: 2023/11/26 19:52:46 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/29 22:51:31 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(const char *nptr)
 	sign = 1;
 	if (*nptr == '\0')
 		return (0);
-	while ((*nptr >= '\a' && *nptr <= '\r') || *nptr == 32)
+	while ((*nptr >= '\t' && *nptr <= '\r') || *nptr == 32)
 		nptr++;
 	if (*nptr == '+' || *nptr == '-')
 	{
@@ -38,11 +38,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (nbr * sign);
 }
-
-/*int main()
-{
-	const char nptr[] = "           -1 00ab";
-	__builtin_printf("%d\n", ft_atoi(nptr));
-	__builtin_printf("%d\n", atoi(nptr));
-	return (0);
-}*/

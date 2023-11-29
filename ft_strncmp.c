@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:59:38 by allan             #+#    #+#             */
-/*   Updated: 2023/11/26 20:37:54 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/29 19:43:38 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	return ((unsigned char) s1[i] - (unsigned char) s2[i]);
 }
-
-/*int main()
-{
-    const char s1[] = "Hello";
-    const char s2[] = "Hella";
-    size_t n = 5;
-    printf("%d", ft_strncmp(s1, s2, n));
-    return (0);
-}*/

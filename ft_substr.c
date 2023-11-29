@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:23:21 by allan             #+#    #+#             */
-/*   Updated: 2023/11/29 18:24:41 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/29 22:54:36 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static char	*ft_check(char const *source, unsigned int start, size_t len)
 	if (start < ft_strlen(source) && len >= ft_strlen(source))
 		return (NULL);
 	if (len == 0 || ((start + len) > ft_strlen(source) || !source)
-		|| len > ft_strlen(source) || start >= ft_strlen(source))
+		|| start >= ft_strlen(source))
 		return (dest);
 	return (NULL);
 }
@@ -39,6 +39,8 @@ char	*ft_substr(char const *source, unsigned int start, size_t len)
 
 	if (ft_check(source, start, len) != NULL)
 		return (dest = ft_check(source, start, len));
+	if (len >= ft_strlen(source))
+		len = ft_strlen(source);
 	dest = malloc((len + 1) * sizeof(char));
 	if (!dest)
 		return (NULL);
