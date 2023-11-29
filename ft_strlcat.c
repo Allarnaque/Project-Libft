@@ -6,24 +6,13 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:07:06 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/26 20:53:23 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/28 11:52:58 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#define SIZE 50
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
-
-static int	str_len(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -32,12 +21,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	j;
 
-	dstlen = str_len(dst);
-	srclen = str_len(src);
-	if (size - 1 <= dstlen)
-	{
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
+	if ((size - 1 <= dstlen && (size + srclen) <= (srclen + dstlen))
+		|| size == 0)
 		return (size + srclen);
-	}
 	i = dstlen;
 	j = 0;
 	while (src[j])
@@ -52,12 +40,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (dstlen + srclen);
 }
-
-/*int main()
-{
-    const char *src = "ca va ?";
-    char dst[30] = "Salut les petit potes comment";
-    ft_strlcat(dst, src, SIZE);
-    __builtin_printf("%zu\n%s\n", ft_strlcat(dst, src, SIZE), dst);
-    return (0);
-}*/

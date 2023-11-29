@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 14:12:31 by allan             #+#    #+#             */
-/*   Updated: 2023/11/26 20:57:47 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/29 18:23:36 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,3 @@ int	ft_toupper(int ch)
 	}
 	return (ch);
 }
-
-/*int main()
-{
-    int ch = '9';
-
-    printf("%c\n", ft_toupper(ch));
-    printf("%c", toupper(ch));
-    return (0);
-}*/

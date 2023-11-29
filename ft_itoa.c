@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:07:06 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/26 20:52:57 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/29 18:21:52 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_itoa(int n);
 
-int	ft_len_int(long n)
+static int	ft_len_int(long n)
 {
 	int	len_int;
 
@@ -62,11 +62,3 @@ char	*ft_itoa(int n)
 	}
 	return (arr);
 }
-
-/*int main()
-{
-    int n = 0;
-    char *arr = ft_itoa(n);
-    printf("%s", arr);
-    return (0);
-}*/

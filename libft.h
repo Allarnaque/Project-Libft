@@ -6,17 +6,17 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 15:52:08 by allan             #+#    #+#             */
-/*   Updated: 2023/11/26 21:13:02 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/29 18:29:53 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef _LIBFT_H_
-#define _LIBFT_H_
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
+#ifndef LIBFT_H
+
+# define LIBFT_H
+
+# include <unistd.h>
+
+# include <stdlib.h>
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
@@ -52,5 +52,5 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_substr(char const *source, unsigned int start, size_t len);
 int		ft_tolower(int ch);
 int		ft_toupper(int ch);
-int		ft_comp(char c, char const *comp);
+
 #endif

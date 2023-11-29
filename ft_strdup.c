@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 16:27:00 by allan             #+#    #+#             */
-/*   Updated: 2023/11/26 20:28:42 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/28 16:28:06 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@ char	*ft_strdup(const char *s);
 
 char	*ft_strdup(const char *s)
 {
-	size_t	arr;
+	size_t	slen;
 	char	*scopy;
 
-	arr = ft_strlen(s);
-	scopy = malloc((arr + 1) * sizeof(char));
+	slen = ft_strlen(s);
+	scopy = malloc((slen + 1) * sizeof(char));
 	if (!scopy)
 		return (NULL);
 	while (*s)
 		*scopy++ = *s++;
 	*scopy = '\0';
-	scopy = scopy - ((arr + 1) * sizeof(char));
+	scopy = scopy - ((slen) * sizeof(char));
 	return (scopy);
 }
 

@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:56:04 by allan             #+#    #+#             */
-/*   Updated: 2023/11/26 21:08:29 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/29 17:15:49 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*dest;
 	size_t	destlen;
 
-	destlen = strlen(s1) + strlen(s2);
-	dest = malloc(destlen * sizeof(char));
+	destlen = ft_strlen(s1) + ft_strlen(s2);
+	dest = malloc(destlen + 1 * sizeof(char));
 	if (!dest)
 		return (NULL);
 	while (*s1)

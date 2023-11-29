@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:31:43 by allan             #+#    #+#             */
-/*   Updated: 2023/11/26 19:56:59 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/29 17:15:02 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	if (nmemb == 0 || size == 0)
+	ptr = malloc(nmemb * size);
+	if (!ptr)
 		return (NULL);
-	ptr = malloc(nmemb * sizeof(size));
-	bzero (ptr, nmemb * size);
+	ft_bzero (ptr, nmemb * size);
 	return (ptr);
 }
 

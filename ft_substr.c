@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:23:21 by allan             #+#    #+#             */
-/*   Updated: 2023/11/26 20:49:36 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/29 18:24:41 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,32 @@
 
 char	*ft_substr(char const *source, unsigned int start, size_t len);
 
+static char	*ft_check(char const *source, unsigned int start, size_t len)
+{
+	char	*dest;
+
+	dest = malloc(1 * sizeof(char));
+	if (!dest)
+		return (NULL);
+	*dest = '\0';
+	if (start < ft_strlen(source) && len <= ft_strlen(source))
+		return (NULL);
+	if (start < ft_strlen(source) && len >= ft_strlen(source))
+		return (NULL);
+	if (len == 0 || ((start + len) > ft_strlen(source) || !source)
+		|| len > ft_strlen(source) || start >= ft_strlen(source))
+		return (dest);
+	return (NULL);
+}
+
 char	*ft_substr(char const *source, unsigned int start, size_t len)
 {
 	char	*dest;
 	size_t	i;
 
-	dest = malloc(len * sizeof(char));
+	if (ft_check(source, start, len) != NULL)
+		return (dest = ft_check(source, start, len));
+	dest = malloc((len + 1) * sizeof(char));
 	if (!dest)
 		return (NULL);
 	i = 0;
@@ -29,13 +49,6 @@ char	*ft_substr(char const *source, unsigned int start, size_t len)
 		i++;
 		start++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
-
-/*int main()
-{
-    char const  source[] = "Hello";
-
-    printf("%s", ft_substr(source, 0, 3));
-    return (0);
-}*/

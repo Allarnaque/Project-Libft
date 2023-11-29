@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:11:49 by allan             #+#    #+#             */
-/*   Updated: 2023/11/26 21:07:35 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/29 18:27:56 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,41 +16,22 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		i;
-	int		j;
-	char	*found;
+	size_t		i;
 
 	i = 0;
-	j = 0;
-	found = (char *)big;
-	if (little[j] == '\0')
+	if (little == NULL || ft_strlen(little) == 0)
 		return ((char *) big);
-	while (big[i] && len > 0)
+	if (ft_strlen(little) > len)
+		return (NULL);
+	while (i < len)
 	{
-		while (big[i] != little[j] && len > 0)
+		if (ft_strncmp((char *)&big[i], little, ft_strlen(little)) == 0)
 		{
-			i++;
-			len--;
+			if (i + ft_strlen(little) > len)
+				return (NULL);
+			return ((char *)&big[i]);
 		}
-		found = (char *)&big[i];
-		while (big[i] == little[j] && len > 0)
-		{
-			i++;
-			j++;
-			len--;
-		}
-		if (little[j] == '\0')
-			return (found);
-		j = 0;
+		i++;
 	}
 	return (NULL);
 }
-
-/*int main()
-{
-    const char big[] = "bohehehel";
-    const char little[] = "he";
-    size_t len = 9;
-    printf("%s\n", ft_strnstr(big, little, len));
-    return (0);
-}*/
