@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:35:09 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/26 21:08:59 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/30 09:52:25 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-
-/*int main()
-{
-    int c = 150;
-    __builtin_printf("%d\n", ft_isascii(c));
-    __builtin_printf("%d\n", isascii(c));
-    return (0);
-}*/

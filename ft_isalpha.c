@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:48:50 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/26 20:55:29 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/30 09:52:25 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,3 @@ int	ft_isalpha(int c)
 	}
 	return (0);
 }
-
-/*int main()
-{
-    int c = 'D';
-    __builtin_printf("%d", ft_isalpha(c));
-    return (0);
-}*/

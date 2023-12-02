@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:07:06 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/29 17:06:29 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/30 09:52:25 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,18 +107,3 @@ char	**ft_split(char const *s, char c)
 	split[i] = 0;
 	return (split);
 }
-
-/*int	main()
-{
-	char *str = "     Hello                             les Potes  ";
-	char c = ' ';
-	char **split;
-	int		i = 0;
-	split = ft_split(str, c);
-	while (split[i])
-	{	
-		printf("%s\n", split[i]);
-		i++;
-	}
-	return (0);
-}*/

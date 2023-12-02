@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:07:06 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/29 11:35:50 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/30 09:52:25 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n % 10, fd);
 	}
 }
-
-/*int main()
-{
-    int i = 1;
-	ft_putnbr_fd(-216545, i);
-	return 0;
-}*/

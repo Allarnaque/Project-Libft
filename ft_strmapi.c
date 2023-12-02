@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:07:06 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/26 21:04:34 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/30 09:52:25 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	dest[i] = '\0';
 	return (dest);
 }
-
-/*int main()
-{
-    char const *s = "a";
-    char* dest = ft_strmapi(s, ft_isdigit_mod);
-    printf("%s", dest);
-    return (0);
-}*/

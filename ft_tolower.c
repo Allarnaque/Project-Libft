@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 14:12:31 by allan             #+#    #+#             */
-/*   Updated: 2023/11/26 20:50:04 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/30 09:52:25 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,3 @@ int	ft_tolower(int ch)
 	}
 	return (ch);
 }
-
-/*int main()
-{
-    int ch = 'Z';
-
-    printf("%c\n", ft_tolower(ch));
-    printf("%c", tolower(ch));
-    return (0);
-}*/

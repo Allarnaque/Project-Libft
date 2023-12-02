@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:07:06 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/26 20:35:42 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/30 09:52:25 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-/*int main()
-{
-    const char s[] = "dkskdskosjdoijfsofd";
-    __builtin_printf("%lu\n", (unsigned long)ft_strlen(s));
-    __builtin_printf("%lu\n", strlen(s));
-    return (0);
-}*/

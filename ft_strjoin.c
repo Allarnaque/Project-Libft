@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:56:04 by allan             #+#    #+#             */
-/*   Updated: 2023/11/29 17:15:49 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/30 09:52:25 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	dest = dest - destlen;
 	return (dest);
 }
-
-/*int main()
-{
-    char s1[] = "Hello";
-    char s2[] = "Les Potes";
-    printf("%s", ft_strjoin(s1, s2));
-    return (0);
-}*/

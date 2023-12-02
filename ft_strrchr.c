@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 23:10:46 by allan             #+#    #+#             */
-/*   Updated: 2023/11/29 13:11:01 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/30 09:52:25 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-/*int main()
-{
-    int c = 98;
-    const char s[] = "kgbjgnb";
-    __builtin_printf("%s", ft_strrchr(s, c));
-    __builtin_printf("%s", strrchr(s, c));
-    return (0);
-
-}*/

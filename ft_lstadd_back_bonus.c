@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 12:07:06 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/30 09:52:25 by allan            ###   ########.fr       */
+/*   Created: 2023/12/01 12:07:32 by allan             #+#    #+#             */
+/*   Updated: 2023/12/02 22:48:40 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
-int	ft_isdigit(int c)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (c >= '0' && c <= '9')
-		return (2048);
-	return (0);
-}
+	t_list	*last_node;
 
+	if (lst)
+	{
+		if (*lst)
+		{
+			last_node = ft_lstlast(*lst);
+			last_node->next = new;
+		}
+		else
+			*lst = new;
+		last_node = ft_lstlast(*lst);
+		last_node->next = NULL;
+	}
+}

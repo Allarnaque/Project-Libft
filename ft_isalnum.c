@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:07:06 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/26 20:58:11 by allan            ###   ########.fr       */
+/*   Updated: 2023/11/30 09:52:25 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,3 @@ int	ft_isalnum(int c)
 		return (8);
 	return (0);
 }
-
-/*int main()
-{
-    int c = 49;
-    __builtin_printf("%d\n", ft_isalnum(c));
-    __builtin_printf("%d\n", isalnum(c));
-    return (0);
-}*/
