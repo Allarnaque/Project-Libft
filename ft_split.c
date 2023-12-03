@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:07:06 by adebert           #+#    #+#             */
-/*   Updated: 2023/11/30 09:52:25 by allan            ###   ########.fr       */
+/*   Updated: 2023/12/03 00:19:39 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ static int	ft_words(char *str, char sep)
 
 	words = 0;
 	i = 0;
+	if (sep == 32 && ft_strlen(str) == 0)
+		return (0);
 	if (sep_count(&str[0], sep) == 0)
 		words++;
 	while (str[i])
@@ -52,6 +54,7 @@ static void	ft_free(char**split)
 		free(split[i]);
 		i++;
 	}
+	free(split);
 }
 
 static char	*ft_strdup_split(char *str, char c, char **split)
@@ -64,10 +67,10 @@ static char	*ft_strdup_split(char *str, char c, char **split)
 	while (str[len] && sep_count(&str[len], c) == 0)
 		len++;
 	i = 0;
-	new = (char *)malloc(sizeof(char) * len + 1);
+	new = malloc(sizeof(char) * (len + 1));
 	if (!new)
 	{
-		ft_free(split);
+		ft_free (split);
 		return (NULL);
 	}
 	while (i < len)

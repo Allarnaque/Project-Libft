@@ -6,7 +6,7 @@
 /*   By: allan <allan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:23:21 by allan             #+#    #+#             */
-/*   Updated: 2023/11/30 17:46:06 by allan            ###   ########.fr       */
+/*   Updated: 2023/12/02 23:23:04 by allan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,23 @@
 
 char	*ft_substr(char const *source, unsigned int start, size_t len);
 
-static char	*ft_check(char const *source, unsigned int start, size_t len)
-{
-	char	*dest;
-
-	dest = malloc(1 * sizeof(char));
-	if (!dest)
-		return (NULL);
-	*dest = '\0';
-	if (start < ft_strlen(source) && len <= ft_strlen(source))
-		return (NULL);
-	if (start < ft_strlen(source) && len >= ft_strlen(source))
-		return (NULL);
-	if (len == 0 || ((start + len) > ft_strlen(source) || !source)
-		|| start >= ft_strlen(source))
-		return (dest);
-	return (NULL);
-}
-
 char	*ft_substr(char const *source, unsigned int start, size_t len)
 {
 	char	*dest;
 	size_t	i;
 
-	if (ft_check(source, start, len) != NULL)
-		return (dest = ft_check(source, start, len));
-	if (len >= ft_strlen(source))
-		len = ft_strlen(source);
+	if (start > ft_strlen(source))
+		len = 0;
+	else if (len > ft_strlen(source + start))
+		len = ft_strlen(source + start);
 	dest = malloc((len + 1) * sizeof(char));
 	if (!dest)
 		return (NULL);
 	i = 0;
-	while (source[start] && i < len)
+	while (start + i < ft_strlen(source) && i < len)
 	{
-		dest[i] = source[start];
+		dest[i] = source[start + i];
 		i++;
-		start++;
 	}
 	dest[i] = '\0';
 	return (dest);
